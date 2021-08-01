@@ -128,7 +128,7 @@ namespace task.Controllers
                     ClearView();
                 }
                 else
-                    MessageBox.Show("Такой ID уже существует", "Ошибка.");
+                    MessageBox.Show("This ID already exists!", "Error.");
             }
             else
             {

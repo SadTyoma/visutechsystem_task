@@ -442,7 +442,7 @@ namespace task.Views
             if (regex2.Match(age.Text).Length != 0 && regex.Match(firstname.Text).Length != 0 && regex.Match(lastname.Text).Length != 0 && regex2.Match(id.Text).Length != 0)
                 _controller.Save();
             else
-                MessageBox.Show("Неверный ввод", "Ошибка.");
+                MessageBox.Show("Invalid input!", "Error.");
         }
         private void remove_Click(object sender, EventArgs e)
         {
@@ -462,7 +462,7 @@ namespace task.Views
             }
             catch
             {
-                MessageBox.Show("Невозможно сохранить XML файл.", "Ошибка.");
+                MessageBox.Show("The XML file cannot be saved!", "Error.");
             }
 
         }
@@ -476,7 +476,7 @@ namespace task.Views
             {
                 if (_user.ID == id)
                 {
-                    MessageBox.Show($"ID {_user.ID} уже есть в списке", "Ошибка.");
+                    MessageBox.Show($"ID {_user.ID} already in the list!", "Error.");
                     return true;
                 }
             }
@@ -529,14 +529,14 @@ namespace task.Views
                     }
                     catch(Exception ev)
                     {
-                        MessageBox.Show(ev.ToString(), "Ошибка.");
+                        MessageBox.Show(ev.ToString(), "Error.");
                     }
                 }
                 _controller.LoadView();
             }
             else
             {
-                MessageBox.Show("XML файл не найден.", "Ошибка.");
+                MessageBox.Show("The XML file was not found!", "Error.");
             }
         }
         private void SerializeDataSet1(string filename)
